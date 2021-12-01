@@ -1,0 +1,39 @@
+{
+	"name": "suggestify-nuxt3",
+	"version": "0.0.1",
+	"description": "Fully accessible search with suggestions for Nuxt3",
+	"contributors": [
+		"Max van der Schee"
+	],
+	"license": "MIT",
+	"author": {
+		"name": "Max van der Schee",
+		"email": "hello@maxvanderschee.nl"
+	},
+	"scripts": {
+		"build": "unbuild",
+		"play": "cd playground && yarn && yarn upgrade nuxt3-ual && yarn dev"
+	},
+	"dependencies": {
+		"nuxt3": "latest"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.4.0",
+		"@typescript-eslint/parser": "^5.4.0",
+		"@vue/eslint-config-prettier": "^6.0.0",
+		"@vue/eslint-config-typescript": "^9.1.0",
+		"unbuild": "^0.5.10",
+		"typescript": "^4.5.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mvdschee/suggestify-nuxt3.git"
+	},
+	"bugs": {
+		"url": "https://github.com/mvdschee/suggestify-nuxt3/issues"
+	},
+	"homepage": "https://github.com/mvdschee/suggestify-nuxt3",
+	"engines": {
+		"node": ">= 14"
+	}
+}
