@@ -1,6 +1,29 @@
 {
 	"name": "suggestify-nuxt3",
 	"version": "0.0.1",
+	"license": "MIT",
+	"repository": "mvdschee/suggestify-nuxt3",
+	"type": "module",
+	"exports": {
+		".": {
+			"require": "./module.cjs",
+			"import": "./module.mjs"
+		},
+		"./suggestify": {
+			"require": "./suggestify.cjs",
+			"import": "./suggestify.mjs"
+		},
+		"./style.scss": "./style.scss"
+	},
+	"main": "./module.cjs",
+	"module": "./module.mjs",
+	"types": "./module.d.ts",
+	"files": [
+		"."
+	],
+	"engines": {
+		"node": ">= 14.x"
+	},
 	"description": "Fully accessible search with suggestions for Nuxt3",
 	"keywords": [
 		"nuxt",
@@ -10,37 +33,8 @@
 	"contributors": [
 		"Max van der Schee"
 	],
-	"license": "MIT",
 	"author": {
 		"name": "Max van der Schee",
 		"email": "hello@maxvanderschee.nl"
-	},
-	"exports": {
-		".": {
-			"import": "./Suggestify.vue"
-		},
-		"./module": "./module.mjs",
-		"./style.scss": "./style.scss"
-	},
-	"module": "./module.mjs",
-	"types": "./module.d.ts",
-	"files": [
-		"Suggestify.vue",
-		"Suggestify.vue.d.ts",
-		"style.scss",
-		"module.mjs",
-		"module.d.ts"
-	],
-	"dependencies": {},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/mvdschee/suggestify-nuxt3.git"
-	},
-	"bugs": {
-		"url": "https://github.com/mvdschee/suggestify-nuxt3/issues"
-	},
-	"homepage": "https://github.com/mvdschee/suggestify-nuxt3",
-	"engines": {
-		"node": ">= 14.x"
 	}
 }

@@ -1,40 +1,12 @@
-import { defineNuxtModule } from '@nuxt/kit';
-// import { dirname, resolve } from 'path';
-// import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'pathe';
+import { defineNuxtModule, addPlugin } from '@nuxt/kit';
+import { fileURLToPath } from 'url';
 
-interface ModuleOptions {
-	appName: string;
-	chainId: string;
-	rpcEndpoints: string[];
-}
-
-export default defineNuxtModule<ModuleOptions>({
+export default defineNuxtModule({
 	name: 'suggestify',
-	configKey: 'suggestify',
-	setup(options: ModuleOptions) {
-		console.log(options);
+	setup(_options, _nuxt) {
+		const distDir = dirname(fileURLToPath(import.meta.url));
 
-		// const __filename = fileURLToPath(import.meta.url);
-		// const __dirname = dirname(__filename);
-
-		// addPluginTemplate({
-		// 	src: resolve(__dirname, './plugin.mjs'),
-		// 	filename: 'nuxt3-ual.mjs',
-		// 	mode: 'client',
-		// 	options,
-		// });
+		addPlugin(resolve(distDir, 'plugin'));
 	},
 });
-
-// @ts-ignore: resolved with Nuxt
-// declare module '#app' {
-// 	interface NuxtApp {
-// 		$suggestify: Suggestify;
-// 	}
-// }
-
-declare module '@nuxt/kit' {
-	interface NuxtConfig {
-		suggestify?: ModuleOptions;
-	}
-}

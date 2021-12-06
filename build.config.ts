@@ -2,9 +2,9 @@ import { defineBuildConfig } from 'unbuild';
 
 export default defineBuildConfig({
 	declaration: true,
-	emitCJS: false,
+	emitCJS: true,
 	clean: true,
 	outDir: 'lib',
-	entries: ['src/', 'static/'],
-	externals: ['@nuxt/kit', 'vue'],
+	entries: ['src/module', 'src/plugin', 'src/suggestify', 'static/'],
+	externals: ['@nuxt/kit', 'vue', '#app', 'pathe', 'url'],
 });
