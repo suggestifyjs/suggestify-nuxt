@@ -3,15 +3,10 @@
 	"version": "0.0.1",
 	"license": "MIT",
 	"repository": "mvdschee/suggestify-nuxt3",
-	"type": "module",
 	"exports": {
 		".": {
 			"require": "./module.cjs",
 			"import": "./module.mjs"
-		},
-		"./suggestify": {
-			"require": "./suggestify.cjs",
-			"import": "./suggestify.mjs"
 		},
 		"./style.scss": "./style.scss"
 	},

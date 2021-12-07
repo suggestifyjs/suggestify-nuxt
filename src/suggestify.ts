@@ -1,6 +1,6 @@
 import { defineComponent } from 'vue';
 
-export const Suggestify = defineComponent({
+export default defineComponent({
 	name: 'Suggestify',
 	props: {
 		name: String,
