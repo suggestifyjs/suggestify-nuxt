@@ -3,16 +3,9 @@
 	"version": "0.0.1",
 	"license": "MIT",
 	"repository": "mvdschee/suggestify-nuxt3",
-	"exports": {
-		".": {
-			"require": "./module.cjs",
-			"import": "./module.mjs"
-		},
-		"./style.scss": "./style.scss"
-	},
-	"main": "./module.cjs",
-	"module": "./module.mjs",
-	"types": "./module.d.ts",
+	"type": "module",
+	"main": "./index.mjs",
+	"types": "./index.d.ts",
 	"files": [
 		"."
 	],
