@@ -2,7 +2,7 @@
 	"name": "@suggestify/nuxt",
 	"version": "0.0.1",
 	"license": "MIT",
-	"repository": "suggestify/nuxt",
+	"repository": "suggestifyjs/nuxt",
 	"description": "Fully accessible search with suggestions",
 	"keywords": [
 		"nuxt",
