@@ -1,4 +1,11 @@
-import { defineComponent, h } from 'vue';
+import { defineComponent, h, PropType, ref } from 'vue';
+import { nanoid } from 'nanoid';
+
+export interface Translations {
+	placeholder?: string;
+	buttonSubmit?: string;
+	buttonCancel?: string;
+}
 
 export const Suggestify = defineComponent({
 	name: 'Suggestify',
@@ -7,20 +14,81 @@ export const Suggestify = defineComponent({
 			type: String,
 			default: 'suggestify',
 		},
+		t: {
+			type: Object as PropType<Translations>,
+		},
 	},
-	setup: (props) => {
+	setup: (props, { slots }) => {
+		const id = nanoid(6);
+		const t = {
+			placeholder: 'Search...',
+			buttonSubmit: 'Search',
+			buttonCancel: 'Delete input',
+			...props.t,
+		};
+
+		const expanded = ref(false);
+
+		const icon = h('i', {
+			class: `${props.class}-icon`,
+			role: 'presentation',
+			focusable: 'false',
+			'aria-hidden': 'true',
+		});
+
+		const results: string[] = [];
+
 		return () =>
-			h('div', {
-				class: props.class,
-				role: 'search',
-			});
+			h(
+				'div',
+				{
+					class: props.class,
+					role: 'search',
+				},
+				[
+					h('input', {
+						placeholder: t.placeholder,
+						'aria-label': t.placeholder,
+						class: `${props.class}-input`,
+						autocomplete: 'off',
+						autocapitalize: 'off',
+						autocorrect: 'off',
+						spellcheck: 'off',
+						role: 'combobox',
+						'aria-autocomplete': 'list',
+						'aria-haspopup': 'listbox',
+						'aria-expanded': expanded.value,
+						'aria-owns': `${props.class}-results-${id}`,
+					}),
+					h(
+						'button',
+						{
+							class: `${props.class}-btn ${props.class}-clear`,
+							'aria-label': t.buttonCancel,
+							hidden: !expanded.value,
+						},
+						slots.delete ? slots.delete() : icon
+					),
+					h(
+						'button',
+						{
+							class: `${props.class}-btn ${props.class}-submit`,
+							type: 'submit',
+							'aria-label': t.buttonSubmit,
+							onClick: () => (expanded.value = !expanded.value),
+						},
+						slots.submit ? slots.submit() : icon
+					),
+					h(
+						'ul',
+						{
+							id: `${props.class}-results-${id}`,
+							class: `${props.class}-results`,
+							role: 'listbox',
+						},
+						results.length && results
+					),
+				]
+			);
 	},
-	// template: `
-	// <div id="suggestify" role="search" class="suggestify">
-	//     <input placeholder="Search for city" aria-label="Search for city" class="suggestify-input" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="off" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-expanded="false" aria-owns="suggestify-results-d4Lwf">
-	//     <button aria-label="Delete input" class="suggestify-clear" hidden=""><i class="suggestify-icon" role="presentation" focusable="false" aria-hidden="true"></i></button>
-	//     <button type="submit" aria-label="Search" class="suggestify-submit"><i class="suggestify-icon" role="presentation" focusable="false" aria-hidden="true"></i></button>
-	//     <ul id="suggestify-results-d4Lwf" class="suggestify-results" role="listbox"></ul>
-	// </div>
-	// `,
 });
