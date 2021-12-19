@@ -1,7 +1,7 @@
 <template>
-	<Suggestify />
+	<Suggestify name="test" />
 </template>
 
 <script setup lang="ts">
-// import Suggestify from 'suggestify-nuxt3';
+import { Suggestify } from '@suggestify/nuxt';
 </script>

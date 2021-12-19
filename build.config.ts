@@ -5,6 +5,6 @@ export default defineBuildConfig({
 	emitCJS: false,
 	clean: true,
 	outDir: 'lib',
-	entries: ['src/index', 'src/plugin', 'src/suggestify', 'static/'],
-	externals: ['@nuxt/kit', 'vue', '#app', 'pathe', 'url'],
+	entries: ['src/index', 'src/module', 'static/'],
+	externals: ['vue', 'vue-demi', 'ohmyfetch', 'h3', '@nuxt/kit', '#app', '#build'],
 });

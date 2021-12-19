@@ -1,18 +1,9 @@
 {
-	"name": "suggestify-nuxt3",
+	"name": "@suggestify/nuxt",
 	"version": "0.0.1",
 	"license": "MIT",
-	"repository": "mvdschee/suggestify-nuxt3",
-	"type": "module",
-	"main": "./index.mjs",
-	"types": "./index.d.ts",
-	"files": [
-		"."
-	],
-	"engines": {
-		"node": ">= 14.x"
-	},
-	"description": "Fully accessible search with suggestions for Nuxt3",
+	"repository": "suggestify/nuxt",
+	"description": "Fully accessible search with suggestions",
 	"keywords": [
 		"nuxt",
 		"nuxt3",
@@ -24,5 +15,24 @@
 	"author": {
 		"name": "Max van der Schee",
 		"email": "hello@maxvanderschee.nl"
+	},
+	"exports": {
+		".": {
+			"import": "./index.mjs",
+			"require": "./index.cjs",
+			"types": "./index.d.ts"
+		},
+		"./*": "./*",
+		"./nuxt": {
+			"import": "./nuxt.mjs",
+			"require": "./nuxt.cjs",
+			"types": "./nuxt.d.ts"
+		}
+	},
+	"main": "./index.cjs",
+	"types": "./index.d.ts",
+	"module": "./index.mjs",
+	"peerDependencies": {
+		"vue": "^3.x.x"
 	}
 }

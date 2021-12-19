@@ -571,6 +571,9 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@suggestify/nuxt@file:../lib":
+  version "0.0.1"
+
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
@@ -4766,9 +4769,6 @@ stylehacks@^5.0.1:
   dependencies:
     browserslist "^4.16.0"
     postcss-selector-parser "^6.0.4"
-
-"suggestify-nuxt3@file:../lib":
-  version "0.0.1"
 
 supports-color@^2.0.0:
   version "2.0.0"
