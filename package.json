@@ -1,35 +1,41 @@
 {
-	"name": "@suggestify/nuxt",
-	"version": "0.0.1",
-	"description": "Fully accessible search with suggestions",
-	"contributors": [
-		"Max van der Schee"
-	],
-	"license": "MIT",
-	"author": {
-		"name": "Max van der Schee",
-		"email": "hello@maxvanderschee.nl"
-	},
-	"scripts": {
-		"build": "unbuild",
-		"play": "cd playground && yarn && yarn upgrade @suggestify/nuxt && yarn dev"
-	},
-	"dependencies": {
-		"nanoid": "^3.1.30",
-		"nuxt3": "latest",
-		"ohmyfetch": "^0.4.14"
-	},
-	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^5.4.0",
-		"@typescript-eslint/parser": "^5.4.0",
-		"@vue/eslint-config-prettier": "^6.0.0",
-		"@vue/eslint-config-typescript": "^9.1.0",
-		"typescript": "^4.5.2",
-		"unbuild": "^0.5.10"
-	},
-	"repository": "suggestifyjs/nuxt",
-	"homepage": "https://github.com/suggestifyjs/nuxt",
-	"engines": {
-		"node": ">= 14"
-	}
+    "name": "@suggestify/nuxt",
+    "version": "0.0.1",
+    "description": "Fully accessible search with suggestions",
+    "contributors": [
+        "Max van der Schee"
+    ],
+    "license": "MIT",
+    "author": {
+        "name": "Max van der Schee",
+        "email": "hello@maxvanderschee.nl"
+    },
+    "scripts": {
+        "build": "unbuild",
+        "lint": "eslint --ext .ts,.vue --ignore-path .gitignore --fix .",
+        "format": "prettier .  --write",
+        "play": "cd playground && yarn && yarn upgrade @suggestify/nuxt && yarn dev"
+    },
+    "dependencies": {
+        "nanoid": "^3.1.30",
+        "nuxt3": "latest",
+        "ohmyfetch": "^0.4.14"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "5.5.0",
+        "@typescript-eslint/parser": "5.5.0",
+        "@vue/eslint-config-prettier": "6.0.0",
+        "@vue/eslint-config-typescript": "9.1.0",
+        "eslint": "8.4.0",
+        "eslint-plugin-prettier": "4.0.0",
+        "eslint-plugin-vue": "8.2.0",
+        "prettier": "^2.5.1",
+        "typescript": "^4.5.4",
+        "unbuild": "^0.6.7"
+    },
+    "repository": "suggestifyjs/nuxt",
+    "homepage": "https://github.com/suggestifyjs/nuxt",
+    "engines": {
+        "node": ">= 14"
+    }
 }

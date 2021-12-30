@@ -1,11 +1,9 @@
 <template>
-	<Suggestify class="suggestify" :t="t" />
+    <SuggestifySearch class="suggestify" :content="t" />
 </template>
 
 <script setup lang="ts">
-import { Suggestify } from '@suggestify/nuxt';
-
 const t: any = {
-	placeholder: 'Search for a movie',
+    placeholder: 'Search for a movie',
 };
 </script>
