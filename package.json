@@ -1,6 +1,6 @@
 {
     "name": "@suggestify/nuxt",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Fully accessible search with suggestions",
     "contributors": [
         "Max van der Schee"
