@@ -163,7 +163,7 @@ const inputSelected = async (): Promise<void> => {
 
         results.value = response;
         expanded.value = true;
-    } catch (error: Error) {
+    } catch (error: any) {
         throw new Error(error);
     }
 };
@@ -171,15 +171,13 @@ const inputSelected = async (): Promise<void> => {
 const directSearch = (): void => {
     const search = cleanInput();
 
-    console.log('test');
-
     if (search) {
         const searchInResults = results.value.items.find((item) => item === search);
         const success = searchInResults ? 'HIT' : 'MISS';
 
         if (props.event) navigator.sendBeacon(props.event, JSON.stringify({ value: search, success }));
 
-        window.location.href = `${this.url}${result}`;
+        window.location.href = `${props.url}${search}`;
     }
 };
 
@@ -194,7 +192,7 @@ const searchInputHandler = (): void => {
 
                 results.value = response;
                 expanded.value = true;
-            } catch (error: Error) {
+            } catch (error: any) {
                 throw new Error(error);
             }
     }, 250);
@@ -213,8 +211,6 @@ const SearchResultsDisplay = (item: string) => {
         return text;
     } else return item;
 };
-
-const onComplete = () => {};
 </script>
 
 <style scoped lang="scss"></style>
