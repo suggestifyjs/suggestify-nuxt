@@ -571,8 +571,10 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@suggestify/nuxt@file:../lib":
-  version "0.0.1"
+"@suggestify/nuxt@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@suggestify/nuxt/-/nuxt-0.0.2.tgz#3aa0d30296ad342af39661297394019e82d98108"
+  integrity sha512-L3wxjQ3b98RRm2avCv5Ds1Yt4VK2lt2AcJpUToQKY3I5pwxCsIqBFNJup92itfUmVifzEA1av1BsydCQF9lwog==
 
 "@trysound/sax@0.2.0":
   version "0.2.0"
