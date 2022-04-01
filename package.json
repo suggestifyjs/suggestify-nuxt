@@ -17,7 +17,7 @@
         "play": "cd playground && yarn && yarn upgrade @suggestify/nuxt && yarn dev"
     },
     "dependencies": {
-        "nanoid": "^3.1.30",
+        "nanoid": "^3.3.1",
         "nuxt3": "latest",
         "ohmyfetch": "^0.4.14"
     },
