@@ -4341,10 +4341,10 @@ object.assign@^4.1.2:
     has-symbols "^1.0.1"
     object-keys "^1.1.1"
 
-ohmyfetch@^0.4.14:
-  version "0.4.14"
-  resolved "https://registry.yarnpkg.com/ohmyfetch/-/ohmyfetch-0.4.14.tgz#2382a7e86d0a3d307d35666cbc7499699769a174"
-  integrity sha512-kWllHM3DVJdwB4BpEoHhe+JUviDArit3ZQyVI2X2sxhCYZXlGHAABrsjJ07bac0RG3tae08BnKWy4eRMPKMh4w==
+ohmyfetch@^0.4.15:
+  version "0.4.15"
+  resolved "https://registry.yarnpkg.com/ohmyfetch/-/ohmyfetch-0.4.15.tgz#c7059d2952abacfaaaebd82efab754aca53a5c04"
+  integrity sha512-AJKiMh4s+VYLLiAQi3tZn4Zh/xYr94nOX9FLGVVdbXo7QWrrKIfGweACIKaB06PjQdZtkICzcmNN+CQSR+9vQQ==
   dependencies:
     destr "^1.1.0"
     node-fetch "^3.0.0"
