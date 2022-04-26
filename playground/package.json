@@ -6,7 +6,7 @@
         "start": "node .output/server/index.mjs"
     },
     "dependencies": {
-        "@suggestify/nuxt": "file:../lib"
+        "@suggestify/nuxt": "0.0.2"
     },
     "devDependencies": {
         "nuxt3": "latest",
